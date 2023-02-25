@@ -1,0 +1,8 @@
+@use './reset';
+@use './colors' as colors;
+body {
+	font-family: 'Overpass', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	background-color: #333;
+}
