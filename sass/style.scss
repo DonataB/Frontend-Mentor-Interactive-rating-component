@@ -5,3 +5,18 @@ body {
 	color: #fff;
 	background-color: colors.$background-color;
 }
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: colors.$card-bg-color;
+	border-radius: 15px;
+	padding: 10px;
+	width: 90%;
+	max-width: 500px;
+	height: 500px;
+}
