@@ -16,7 +16,7 @@ body {
 	padding: 10px;
 	width: 90%;
 	max-width: 380px;
-	height: 350px;
+	max-height: 360px;
 }
 
 .card2 {
@@ -84,15 +84,48 @@ body {
 	border-radius: 50px;
 }
 
+.rating {
+	flex-direction: row-reverse;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.rating input[type='radio']:hover ~ label {
+	color: colors.$font-color;
+	background-color: colors.$btn-light-color;
+}
+
+input[type='radio']:checked ~ label {
+	color: colors.$font-color;
+	background-color: colors.$btn-color;
+}
+
+
+
+
+
+
 @media (min-width: 768px) {
 	.card {
 		padding: 30px;
 	}
 
-	.rating-item:hover {
-		background-color: colors.$btn-color;
-		cursor: pointer;
-	}
+	// .rating-item:hover {
+	// 	background-color: colors.$btn-color;
+	// 	cursor: pointer;
+	// }
+
+	// .rating-item:focus {
+	// 	// background-color: colors.$btn-light-color;
+	// 	background-color: #fff;
+	// }
 
 	.submit-btn:hover {
 		background-color: colors.$font-color;
@@ -100,3 +133,5 @@ body {
 		cursor: pointer;
 	}
 }
+
+
