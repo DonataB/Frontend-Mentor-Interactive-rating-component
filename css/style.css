@@ -6,7 +6,7 @@
 
 body {
   font-family: "Overpass", sans-serif;
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   background-color: hsl(216, 12%, 8%);
 }
 
@@ -19,8 +19,15 @@ body {
   border-radius: 15px;
   padding: 10px;
   width: 90%;
-  max-width: 500px;
+  max-width: 380px;
   height: 350px;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
@@ -33,24 +40,28 @@ body {
   background-color: hsla(225, 2%, 33%, 0.2);
 }
 
-.title {
-  margin: 15px 0;
-}
-
 .text {
-  margin: 15px 0;
+  margin: 20px 0;
   line-height: 1.3;
+}
+.text .text-info {
+  margin: 20px 0;
   color: hsl(216, 12%, 54%);
 }
 
-.list {
+.text2 {
+  text-align: center;
+}
+
+.rating {
   display: flex;
   justify-content: space-between;
   color: hsl(216, 12%, 54%);
   font-size: 14px;
 }
-.list li {
+.rating .rating-item {
   list-style: none;
+  transition: background-color 0.3s;
 }
 
 .submit-btn {
@@ -63,4 +74,31 @@ body {
   background-color: hsl(25, 97%, 53%);
   border: none;
   border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.picture {
+  margin: 20px 0;
+}
+
+.selected {
+  padding: 10px 20px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsla(225, 2%, 33%, 0.2);
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 30px;
+  }
+  .rating-item:hover {
+    background-color: hsl(25, 97%, 53%);
+    cursor: pointer;
+  }
+  .submit-btn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */

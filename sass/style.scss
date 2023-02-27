@@ -2,10 +2,8 @@
 @use './colors' as colors;
 body {
 	font-family: 'Overpass', sans-serif;
-	color: #fff;
+	color: colors.$font-color;
 	background-color: colors.$background-color;
-	// width: 100%;
-	// height: 100vh;
 }
 
 .card {
@@ -17,8 +15,15 @@ body {
 	border-radius: 15px;
 	padding: 10px;
 	width: 90%;
-	max-width: 500px;
+	max-width: 380px;
 	height: 350px;
+}
+
+.card2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .circle {
@@ -30,24 +35,28 @@ body {
 	border-radius: 50%;
 	background-color: colors.$bg-light-color;
 }
-.title {
-	margin: 15px 0;
-}
 
 .text {
-	margin: 15px 0;
+	margin: 20px 0;
 	line-height: 1.3;
-	color: colors.$font-light-color;
-}
 
-.list {
+	.text-info {
+		margin: 20px 0;
+		color: colors.$font-light-color;
+	}
+}
+.text2 {
+	text-align: center;
+}
+.rating {
 	display: flex;
 	justify-content: space-between;
 	color: colors.$font-light-color;
 	font-size: 14px;
 
-	li {
+	.rating-item {
 		list-style: none;
+		transition: background-color 0.3s;
 	}
 }
 
@@ -61,4 +70,33 @@ body {
 	background-color: colors.$btn-color;
 	border: none;
 	border-radius: 50px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.picture {
+	margin: 20px 0;
+}
+
+.selected {
+	padding: 10px 20px;
+	color: colors.$btn-color;
+	background-color: colors.$bg-light-color;
+	border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+	.card {
+		padding: 30px;
+	}
+
+	.rating-item:hover {
+		background-color: colors.$btn-color;
+		cursor: pointer;
+	}
+
+	.submit-btn:hover {
+		background-color: colors.$font-color;
+		color: colors.$btn-color;
+		cursor: pointer;
+	}
 }
