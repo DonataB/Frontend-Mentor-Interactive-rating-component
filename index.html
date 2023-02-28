@@ -17,33 +17,33 @@
 
 <body>
 
-  <div class="card">
-    <div class="circle">
-      <img src="./images/icon-star.svg" alt="orange star icon">
-    </div>
-    <div class="text">
-      <h1 class="text-title"> How did we do?</h1>
-      <p class="text-info"> Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    </div>
-    <!-- <ul class="rating">
-      <li class="rating-item circle">1</li>
-      <li class="rating-item circle">2</li>
-      <li class="rating-item circle">3</li>
-      <li class="rating-item circle">4</li>
-      <li class="rating-item circle">5</li>
-    </ul> -->
+  <section class="card">
 
-    <div class="rating">
-      <input type="radio" name="rating" id="rata5"><label class="circle" for="rata5">5</label>
-      <input type="radio" name="rating" id="rata4"><label class="circle" for="rata4">4</label>
-      <input type="radio" name="rating" id="rata3"><label class="circle" for="rata3">3</label>
-      <input type="radio" name="rating" id="rata2"><label class="circle" for="rata2">2</label>
-      <input type="radio" name="rating" id="rata1"><label class="circle" for="rata1">1</label>    
-  </div>
+    <img class="star" src="./images/icon-star.svg" alt="orange star icon">
 
-    <button class="submit-btn" id="btn">Submit</button>
-  </div>
-<script src="./js/main.js"></script>
+    <h1 class="text-title"> How did we do?</h1>
+    <p class="text-info"> Please let us know how we did with your support request. All feedback is appreciated to help
+      us improve our offering!</p>
+
+    <ul class="rating">
+      <li><button class="rating-btn">1</button></li>
+      <li><button class="rating-btn">2</button></li>
+      <li><button class="rating-btn">3</button></li>
+      <li><button class="rating-btn">4</button></li>
+      <li><button class="rating-btn">5</button></li>
+    </ul>
+
+    <button class="submit-btn">Submit</button>
+  </section>
+
+  <section class="thank-you card">
+    <div class="back"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+    <img class="picture" src="./images/illustration-thank-you.svg" alt="phone">
+    <div class="selected">You selected <span id="rating"></span> out of 5</div>
+    <h2 class="text-title">Thank you!</h2>
+    <p class="text-info">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+  </section>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
